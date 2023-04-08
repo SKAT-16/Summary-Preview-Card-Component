@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+}
+
+.parent {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin: 0 auto;
+  max-width: 900px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.parent img {
+  border-radius: 0 5px 5px 0;
+  filter: opacity(0.5) drop-shadow(0 0 0 hsl(300, 80%, 50%));
+  min-width: 50%;
+}
+
+.description {
+  margin: 30px 60px;
+}
+
+.main-title {
+  width: 100%;
+}
+
+.main-title span {
+  color: hsl(277, 64%, 61%);
+}
+
+.main-title,
+.data-grid h2 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+p,
+.data-grid h6 {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+p {
+  width: 90%;
+  line-height: 2;
+}
+
+.data-grid {
+  display: flex;
+  text-align: center;
+}
+
+.data-grid div {
+  margin: 10px auto;
+}
+
+.data-grid h2,
+.data-grid h6 {
+  letter-spacing: 2px;
+  margin: 8px auto;
+}
+
+@media screen and (max-width: 800px) {
+  .parent {
+    border-radius: 0 0 5px 5px;
+    flex-direction: column;
+    text-align: center;
+
+    position: static;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+
+    max-width: 375px;
+    min-width: 250px;
+    width: 70%;
+  }
+
+  .parent img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .description {
+    margin: 30px 40px;
+  }
+
+  .main-title {
+    margin: 30px auto;
+  }
+
+  .data-grid {
+    flex-direction: column;
+  }
+
+}
